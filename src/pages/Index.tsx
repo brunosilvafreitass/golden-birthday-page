@@ -5,6 +5,7 @@ import PhotoCarousel from '@/components/PhotoCarousel';
 import PixQRCode from '@/components/PixQRCode';
 import LocationSection from '@/components/LocationSection';
 import SparkleEffect from '@/components/SparkleEffect';
+import Navbar from '@/components/Navbar';
 
 import carousel1 from '@/assets/carousel-1.jpg';
 import carousel2 from '@/assets/carousel-2.jpg';
@@ -19,11 +20,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
+      <Navbar />
       <SparkleEffect />
       <MusicPlayer />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
+      <section id="inicio" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(43,74%,49%,0.15)_0%,_transparent_50%)]" />
         
         <div className="relative z-10 text-center space-y-8 animate-fade-in">
@@ -66,7 +68,7 @@ const Index = () => {
       </section>
 
       {/* Photos Section */}
-      <section className="py-20 px-4">
+      <section id="fotos" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-5xl text-gradient-gold mb-4">
@@ -82,7 +84,7 @@ const Index = () => {
       </section>
 
       {/* PIX Section */}
-      <section className="py-20 px-4 relative">
+      <section id="presente" className="py-20 px-4 relative scroll-mt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(43,74%,49%,0.1)_0%,_transparent_60%)]" />
         
         <div className="relative z-10 max-w-2xl mx-auto text-center">
@@ -98,7 +100,7 @@ const Index = () => {
       </section>
 
       {/* Location Section */}
-      <section className="py-20 px-4">
+      <section id="local" className="py-20 px-4 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-5xl text-gradient-gold mb-4">
