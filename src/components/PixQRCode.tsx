@@ -1,8 +1,10 @@
 import { Gift } from 'lucide-react';
 
 const PixQRCode = () => {
-  // Placeholder QR code - in production, generate with actual PIX data
-  const qrCodeUrl = "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020126580014br.gov.bcb.pix0136exemplo-chave-pix-aniversariante5204000053039865802BR5925Nome%20do%20Aniversariante6009SAO%20PAULO62070503***6304";
+  // PIX data: CPF 26118641870 - Andressa - Ribeirão Preto
+  const pixKey = "26118641870";
+  const pixPayload = `00020126330014br.gov.bcb.pix0111${pixKey}5204000053039865802BR5908ANDRESSA6014RIBEIRAO PRETO62070503***6304`;
+  const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(pixPayload)}`;
 
   return (
     <div className="flex flex-col items-center">
