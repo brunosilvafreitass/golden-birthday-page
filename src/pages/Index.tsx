@@ -102,7 +102,7 @@ const Index = () => {
             Presente
           </h2>
           <p className="text-muted-foreground font-body text-lg mb-12">
-            Se desejar, contribua com um presente especial
+            Me envie um presente especial
           </p>
 
           <PixQRCode />
