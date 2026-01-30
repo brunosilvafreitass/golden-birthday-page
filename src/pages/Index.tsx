@@ -52,7 +52,7 @@ const Index = () => {
           </h1>
 
           <p className="font-display text-3xl md:text-5xl text-foreground">
-            de <span className="text-gradient-gold">Andressa</span>
+            de <span className="text-gradient-gold">Andresa</span>
           </p>
 
           <p className="text-xl md:text-2xl font-body text-muted-foreground">
