@@ -5,7 +5,7 @@ const LocationSection = () => {
     venue: "Explanada da Estação",
     address: "Rua Emilio Gritti, 395 - Explanada da Estação",
     city: "Ribeirão Preto, SP",
-    date: "15 de Março de 2026",
+    date: "28 de Março de 2026",
     time: "21:00",
     mapsUrl: "https://maps.app.goo.gl/qyK3D6AWZmHFUPsx6",
   };
