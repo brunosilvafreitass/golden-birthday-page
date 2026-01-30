@@ -1,22 +1,29 @@
-import { Sparkles, Heart } from 'lucide-react';
-import Countdown from '@/components/Countdown';
-import MusicPlayer from '@/components/MusicPlayer';
-import PhotoCarousel from '@/components/PhotoCarousel';
-import PixQRCode from '@/components/PixQRCode';
-import LocationSection from '@/components/LocationSection';
-import SparkleEffect from '@/components/SparkleEffect';
-import Navbar from '@/components/Navbar';
+import { Sparkles, Heart } from "lucide-react";
+import Countdown from "@/components/Countdown";
+import MusicPlayer from "@/components/MusicPlayer";
+import PhotoCarousel from "@/components/PhotoCarousel";
+import PixQRCode from "@/components/PixQRCode";
+import LocationSection from "@/components/LocationSection";
+import SparkleEffect from "@/components/SparkleEffect";
+import Navbar from "@/components/Navbar";
 
-import carousel1 from '@/assets/carousel-1.jpg';
-import carousel2 from '@/assets/carousel-2.jpg';
-import carousel3 from '@/assets/carousel-3.jpg';
-import carousel4 from '@/assets/carousel-4.jpg';
+import carousel1 from "@/assets/carousel-1.jpeg";
+import carousel2 from "@/assets/carousel-2.jpeg";
+import carousel3 from "@/assets/carousel-3.jpeg";
+import carousel4 from "@/assets/carousel-4.jpeg";
+import carousel5 from "@/assets/carousel-5.jpeg";
 
 const Index = () => {
   // Set your party date here
-  const partyDate = new Date('2025-02-15T20:00:00');
-  
-  const carouselImages = [carousel1, carousel2, carousel3, carousel4];
+  const partyDate = new Date("2026-03-28T21:00:00");
+
+  const carouselImages = [
+    carousel1,
+    carousel2,
+    carousel3,
+    carousel4,
+    carousel5,
+  ];
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
@@ -25,9 +32,12 @@ const Index = () => {
       <MusicPlayer />
 
       {/* Hero Section */}
-      <section id="inicio" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20">
+      <section
+        id="inicio"
+        className="relative min-h-screen flex flex-col items-center justify-center px-4 py-20"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(43,74%,49%,0.15)_0%,_transparent_50%)]" />
-        
+
         <div className="relative z-10 text-center space-y-8 animate-fade-in">
           <div className="flex items-center justify-center gap-3 mb-4">
             <Sparkles className="w-6 h-6 text-primary animate-pulse" />
@@ -40,9 +50,9 @@ const Index = () => {
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-gradient-gold leading-tight">
             Aniversário
           </h1>
-          
+
           <p className="font-display text-3xl md:text-5xl text-foreground">
-            de <span className="text-gradient-gold">Maria</span>
+            de <span className="text-gradient-gold">Andressa</span>
           </p>
 
           <p className="text-xl md:text-2xl font-body text-muted-foreground">
@@ -78,7 +88,7 @@ const Index = () => {
               Revivendo memórias incríveis
             </p>
           </div>
-          
+
           <PhotoCarousel images={carouselImages} />
         </div>
       </section>
@@ -86,7 +96,7 @@ const Index = () => {
       {/* PIX Section */}
       <section id="presente" className="py-20 px-4 relative scroll-mt-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(43,74%,49%,0.1)_0%,_transparent_60%)]" />
-        
+
         <div className="relative z-10 max-w-2xl mx-auto text-center">
           <h2 className="font-display text-3xl md:text-5xl text-gradient-gold mb-4">
             Presente
@@ -94,7 +104,7 @@ const Index = () => {
           <p className="text-muted-foreground font-body text-lg mb-12">
             Se desejar, contribua com um presente especial
           </p>
-          
+
           <PixQRCode />
         </div>
       </section>
@@ -110,7 +120,7 @@ const Index = () => {
               Te esperamos neste endereço especial
             </p>
           </div>
-          
+
           <LocationSection />
         </div>
       </section>

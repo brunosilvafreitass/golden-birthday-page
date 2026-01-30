@@ -1,12 +1,15 @@
-import { useState, useRef, useEffect } from 'react';
-import { Play, Pause, Volume2 } from 'lucide-react';
+import { useState, useRef, useEffect } from "react";
+import { Play, Pause, Volume2 } from "lucide-react";
 
 const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   // Using a royalty-free funk/party music
-  const musicUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+  const musicUrl = new URL(
+    "@/components/music/Preciso_Saber_Viver.mp3",
+    import.meta.url,
+  ).href;
 
   useEffect(() => {
     if (audioRef.current) {
@@ -31,8 +34,8 @@ const MusicPlayer = () => {
       <audio ref={audioRef} src={musicUrl} />
       <button
         onClick={togglePlay}
-        className={`music-btn ${isPlaying ? 'playing' : ''}`}
-        aria-label={isPlaying ? 'Pausar música' : 'Tocar música'}
+        className={`music-btn ${isPlaying ? "playing" : ""}`}
+        aria-label={isPlaying ? "Pausar música" : "Tocar música"}
       >
         {isPlaying ? (
           <Pause className="w-7 h-7 text-primary-foreground" />

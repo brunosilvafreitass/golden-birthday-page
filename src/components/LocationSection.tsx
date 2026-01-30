@@ -1,13 +1,13 @@
-import { MapPin, Navigation, Clock, Calendar } from 'lucide-react';
+import { MapPin, Navigation, Clock, Calendar } from "lucide-react";
 
 const LocationSection = () => {
   const eventDetails = {
-    venue: "Salão de Festas Elegance",
-    address: "Rua das Flores, 123 - Centro",
-    city: "São Paulo, SP",
-    date: "15 de Fevereiro de 2025",
-    time: "20:00",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Salão+de+Festas+São+Paulo"
+    venue: "Explanada da Estação",
+    address: "Rua Emilio Gritti, 395 - Explanada da Estação",
+    city: "Ribeirão Preto, SP",
+    date: "15 de Março de 2026",
+    time: "21:00",
+    mapsUrl: "https://maps.app.goo.gl/qyK3D6AWZmHFUPsx6",
   };
 
   return (
@@ -16,10 +16,13 @@ const LocationSection = () => {
         {/* Map Preview */}
         <div className="relative h-48 md:h-64 bg-muted overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1975659893394!2d-46.65563492392784!3d-23.56150056115698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1706000000000!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7441.652531250343!2d-47.7756252!3d-21.1593112!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b9bf07d9dfe639%3A0xffdceca7f9fc5037!2sEspa%C3%A7o%20de%20Eventos%20Explanada%20Da%20Esta%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1769729317446!5m2!1spt-BR!2sbr"
             width="100%"
             height="100%"
-            style={{ border: 0, filter: 'grayscale(100%) invert(92%) contrast(83%)' }}
+            style={{
+              border: 0,
+              filter: "grayscale(100%) invert(92%) contrast(83%)",
+            }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -35,20 +38,30 @@ const LocationSection = () => {
               <MapPin className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h3 className="font-display text-xl text-foreground">{eventDetails.venue}</h3>
-              <p className="text-muted-foreground font-body">{eventDetails.address}</p>
-              <p className="text-muted-foreground font-body">{eventDetails.city}</p>
+              <h3 className="font-display text-xl text-foreground">
+                {eventDetails.venue}
+              </h3>
+              <p className="text-muted-foreground font-body">
+                {eventDetails.address}
+              </p>
+              <p className="text-muted-foreground font-body">
+                {eventDetails.city}
+              </p>
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4 mb-6">
             <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
               <Calendar className="w-5 h-5 text-primary" />
-              <span className="text-sm font-body text-foreground">{eventDetails.date}</span>
+              <span className="text-sm font-body text-foreground">
+                {eventDetails.date}
+              </span>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50">
               <Clock className="w-5 h-5 text-primary" />
-              <span className="text-sm font-body text-foreground">{eventDetails.time}</span>
+              <span className="text-sm font-body text-foreground">
+                {eventDetails.time}
+              </span>
             </div>
           </div>
 

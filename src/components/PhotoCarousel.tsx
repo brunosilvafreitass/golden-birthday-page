@@ -1,13 +1,16 @@
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback, useEffect, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface PhotoCarouselProps {
   images: string[];
 }
 
 const PhotoCarousel = ({ images }: PhotoCarouselProps) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: 'center' });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "center",
+  });
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
@@ -15,22 +18,25 @@ const PhotoCarousel = ({ images }: PhotoCarouselProps) => {
 
   useEffect(() => {
     if (!emblaApi) return;
-    
+
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
-    emblaApi.on('select', onSelect);
-    
+    emblaApi.on("select", onSelect);
+
     // Auto-play
     const autoplay = setInterval(() => emblaApi.scrollNext(), 4000);
-    
+
     return () => {
-      emblaApi.off('select', onSelect);
+      emblaApi.off("select", onSelect);
       clearInterval(autoplay);
     };
   }, [emblaApi]);
 
   return (
     <div className="relative max-w-4xl mx-auto">
-      <div className="overflow-hidden rounded-lg border-gradient-gold" ref={emblaRef}>
+      <div
+        className="overflow-hidden rounded-lg border-gradient-gold"
+        ref={emblaRef}
+      >
         <div className="flex">
           {images.map((src, index) => (
             <div key={index} className="flex-[0_0_100%] min-w-0 relative">
@@ -38,7 +44,7 @@ const PhotoCarousel = ({ images }: PhotoCarouselProps) => {
                 <img
                   src={src}
                   alt={`Foto ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain bg-black"
                 />
               </div>
             </div>
@@ -67,9 +73,9 @@ const PhotoCarousel = ({ images }: PhotoCarouselProps) => {
             key={index}
             onClick={() => emblaApi?.scrollTo(index)}
             className={`w-2 h-2 rounded-full transition-all ${
-              index === selectedIndex 
-                ? 'bg-primary w-6' 
-                : 'bg-primary/30 hover:bg-primary/50'
+              index === selectedIndex
+                ? "bg-primary w-6"
+                : "bg-primary/30 hover:bg-primary/50"
             }`}
           />
         ))}
