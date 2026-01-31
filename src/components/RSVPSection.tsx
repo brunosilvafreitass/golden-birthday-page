@@ -36,12 +36,13 @@ const RSVPSection = () => {
 
     const guestText = guests === 1 ? "1 pessoa" : `${guests} pessoas`;
     const message = encodeURIComponent(
-      `Olá Andresa! 🎉\n\n` +
-      `Presença confirmada! 🥳\n\n` +
-      `🙋 ${name.trim()}\n` +
-      `👥 ${guestText}\n\n` +
-      `Até lá! 🎂🎈`
+      `Olá Andresa! \uD83C\uDF89\n\n` +
+      `Confirmo minha presença na sua festa de aniversário!\n\n` +
+      `\uD83D\uDC64 Nome: ${name.trim()}\n` +
+      `\uD83D\uDC65 Quantidade: ${guestText}\n\n` +
+      `Nos vemos lá! \uD83E\uDD73`
     );
+
 
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
