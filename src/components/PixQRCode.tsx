@@ -103,7 +103,7 @@ const PixQRCode = () => {
       </div>
 
       <div className="mt-6 flex items-center gap-2 text-muted-foreground">
-        <Gift className="w-5 h-5 text-primary" />
+        {/*<Gift className="w-5 h-5 text-primary" />*/}
         <span className="text-sm font-body">
           {/*Sua presença é o maior presente!*/}
         </span>
