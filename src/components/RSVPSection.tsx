@@ -18,7 +18,7 @@ const RSVPSection = () => {
   const { toast } = useToast();
 
   // Número do WhatsApp do aniversariante (com código do país)
-  const whatsappNumber = "551699310361"; // Altere para o número correto
+  const whatsappNumber = "5516993103661"; // Altere para o número correto
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
