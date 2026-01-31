@@ -11,6 +11,7 @@ const navItems: NavItem[] = [
   { label: 'Fotos', href: '#fotos' },
   { label: 'Presente', href: '#presente' },
   { label: 'Local', href: '#local' },
+  { label: 'Presença', href: '#presenca' },
 ];
 
 const Navbar = () => {

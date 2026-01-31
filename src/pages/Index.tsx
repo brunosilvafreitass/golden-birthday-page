@@ -1,4 +1,4 @@
-import { Sparkles, Heart } from "lucide-react";
+import { Sparkles, Heart, PartyPopper } from "lucide-react";
 import Countdown from "@/components/Countdown";
 import MusicPlayer from "@/components/MusicPlayer";
 import PhotoCarousel from "@/components/PhotoCarousel";
@@ -6,6 +6,7 @@ import PixQRCode from "@/components/PixQRCode";
 import LocationSection from "@/components/LocationSection";
 import SparkleEffect from "@/components/SparkleEffect";
 import Navbar from "@/components/Navbar";
+import RSVPSection from "@/components/RSVPSection";
 
 import carousel1 from "@/assets/carousel-1.jpeg";
 import carousel2 from "@/assets/carousel-2.jpeg";
@@ -125,6 +126,26 @@ const Index = () => {
         </div>
       </section>
 
+      {/* RSVP Section */}
+      <section id="presenca" className="py-20 px-4 relative scroll-mt-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_hsl(43,74%,49%,0.1)_0%,_transparent_60%)]" />
+
+        <div className="relative z-10 max-w-2xl mx-auto text-center">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <PartyPopper className="w-6 h-6 text-primary" />
+            <h2 className="font-display text-3xl md:text-5xl text-gradient-gold">
+              Confirme sua Presença
+            </h2>
+            <PartyPopper className="w-6 h-6 text-primary" />
+          </div>
+          <p className="text-muted-foreground font-body text-lg mb-12">
+            Confirme pelo WhatsApp para garantir sua vaga!
+          </p>
+
+          <RSVPSection />
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-primary/20">
         <div className="max-w-2xl mx-auto text-center">
@@ -136,7 +157,7 @@ const Index = () => {
             <Heart className="w-5 h-5 text-primary fill-primary" />
           </div>
           <p className="text-muted-foreground text-sm font-body">
-            Confirme sua presença até 10 de Fevereiro
+            Confirme sua presença até 10 de Março
           </p>
         </div>
       </footer>
