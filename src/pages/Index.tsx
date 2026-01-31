@@ -157,7 +157,7 @@ const Index = () => {
             <Heart className="w-5 h-5 text-primary fill-primary" />
           </div>
           <p className="text-muted-foreground text-sm font-body">
-            Confirme sua presença até 10 de Março
+            Confirme sua presença até 20 de Fevereiro
           </p>
         </div>
       </footer>
