@@ -52,7 +52,7 @@ const PixQRCode = () => {
 
   const pixPayload = gerarPixPayload(
     "26118641870",
-    "Andressa",
+    "Andresa",
     "RIBEIRAO PRETO",
   );
 
@@ -80,7 +80,7 @@ const PixQRCode = () => {
           </div>
 
           <p className="text-center mt-4 text-primary font-display text-lg">
-            PIX • Valor livre
+            PIX • Vale Presente
           </p>
 
           <button
