@@ -103,7 +103,7 @@ const Index = () => {
             Presente
           </h2>
           <p className="text-muted-foreground font-body text-lg mb-12">
-            Me envie um presente especial
+            
           </p>
 
           <PixQRCode />
@@ -150,11 +150,11 @@ const Index = () => {
       <footer className="py-12 px-4 border-t border-primary/20">
         <div className="max-w-2xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Heart className="w-5 h-5 text-primary fill-primary" />
+            {/*<Heart className="w-5 h-5 text-primary fill-primary" />
             <span className="font-display text-xl text-gradient-gold">
               Contamos com sua presença!
             </span>
-            <Heart className="w-5 h-5 text-primary fill-primary" />
+            <Heart className="w-5 h-5 text-primary fill-primary" />*/}
           </div>
           <p className="text-muted-foreground text-sm font-body">
             Confirme sua presença até 20 de Fevereiro
