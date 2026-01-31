@@ -80,7 +80,7 @@ const PixQRCode = () => {
           </div>
 
           <p className="text-center mt-4 text-primary font-display text-lg">
-            PIX • Vale Presente
+            PIX ou Vale Presente
           </p>
 
           <button
