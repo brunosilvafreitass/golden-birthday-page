@@ -138,9 +138,9 @@ const Index = () => {
             </h2>
             <PartyPopper className="w-6 h-6 text-primary" />
           </div>
-          <p className="text-muted-foreground font-body text-lg mb-12">
+          {/* <p className="text-muted-foreground font-body text-lg mb-12">
             Confirme pelo WhatsApp para garantir sua vaga!
-          </p>
+          </p>*/}
 
           <RSVPSection />
         </div>
